@@ -107,7 +107,8 @@ int main()
             }
             break;
         }
-       
+
+    
             // El menu debe permitir ejecutar el escenario obligatorio, en este orden:
             //
             // Paso 1: elegir cada reporte sin equipos registrados (rechazos).

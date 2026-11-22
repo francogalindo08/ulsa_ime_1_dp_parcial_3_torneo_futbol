@@ -8,7 +8,7 @@ using namespace std;
 void simulacion(){
 
 
-cout << "--- RESULTADOS DE LOS PARTIDOS ---" << endl;
+
 
 
 for(int i = 0; i < 6; i++)
@@ -17,10 +17,11 @@ for(int i = 0; i < 6; i++)
      {
         int golesj = numeroAleatorio();
         int golesi = numeroAleatorio();
-
-cout << r[i].nombre << "      " << golesi << "---" << golesj <<"      " << r[j].nombre  << endl;
+        
+cout << "simulacion exitosa" << endl;
      }
   }
+
 }
 
 
