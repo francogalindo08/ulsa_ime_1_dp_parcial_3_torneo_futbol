@@ -41,6 +41,12 @@ struct Registro_equipos {
 };
 Registro_equipos r[6];
 
+struct Partido {
+    string equipo1;
+    string equipo2;
+    int goles1;
+    int goles2;
+};
 
 
 // ---------- Funciones comunes (equipo) ----------
