@@ -72,15 +72,36 @@ int main()
         }
         break;
         case 2:
+       
         {
             std::cout << "\n---Nombre de los equipos---\n";
-            for (int k = 0; k < 6; k++)
+            bool equipos = false;
+            for (int k = 0; k < 6; k++){
+             if (r[k].nombre.empty())
+             {
+                equipos = true;
+                break;
+             }
+  
+             }
+             if (equipos == true)
+             {
+                cout << "Error: Primero registra todos los equipos.\n";
+             }
+            else
+            {
+                for (int k = 0; k < 6; k++)
             {
                 std::cout << r[k].nombre << std::endl;
             }
             imprimirLinea(24, '-');
             std::cout << std::endl;
             break;
+
+            }
+            break;
+            
+          
         }
 
         case 3:
