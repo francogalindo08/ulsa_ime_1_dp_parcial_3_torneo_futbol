@@ -107,7 +107,23 @@ int main()
             }
             break;
         }
+        case 4:
+        {
+                std::cout << "\n---Resultados de los partidos---\n";
 
+            if (totalPartidos == 0)
+            {
+                std::cout << "Error: Primero debes simular el torneo.\n";
+            }
+            else
+            {
+                mostrarResultados(resultados, totalPartidos);
+            }
+
+            break;
+        }
+
+       
     
             // El menu debe permitir ejecutar el escenario obligatorio, en este orden:
             //
