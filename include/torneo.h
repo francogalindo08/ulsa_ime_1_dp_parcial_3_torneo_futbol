@@ -38,8 +38,10 @@ const int PUNTOS_DERROTA = 0;
 // Escriban aqui los struct del torneo.
 struct Registro_equipos {
     std::string nombre; 
+    
 };
 Registro_equipos r[6];
+
 
 
 

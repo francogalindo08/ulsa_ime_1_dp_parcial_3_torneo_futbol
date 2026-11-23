@@ -22,7 +22,7 @@ inline void simulacion(Partido resultados[], int &totalPartidos) {
 
             int golesi = numeroAleatorio();
             int golesj = numeroAleatorio();
-                cout << "\nSimulacion exitosa." << endl;
+                
 
 
             guardarResultado(
@@ -33,10 +33,11 @@ inline void simulacion(Partido resultados[], int &totalPartidos) {
                 golesi,
                 golesj
             );
-
       
         }
+
     }
+        cout << "\nSimulacion exitosa." << endl;
 
 }
 
