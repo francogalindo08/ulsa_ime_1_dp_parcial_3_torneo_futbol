@@ -6,7 +6,7 @@
 
 | Módulo | Matrícula | Nombre | Usuario de GitHub | Tema |
 | --- | --- | --- | --- | --- |
-| 1 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | Registro de equipos |
+| 1 | [26084] | [Enrique Talamás Ortiz] | [EnriqueTalamas] | Registro de equipos |
 | 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | Simulación de partidos |
 | 3 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | Tabla de posiciones |
 | 4 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | Clasificación y campeón |
