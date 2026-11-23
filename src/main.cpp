@@ -19,6 +19,7 @@
 #include "BuscarEquipo.h"
 #include "escenario_prueba.h"
 
+
 void imprimirLinea(int largo, char simbolo)
 {
     for (int i = 0; i < largo; i++)
@@ -96,7 +97,7 @@ int main()
             }
             imprimirLinea(24, '-');
             std::cout << std::endl;
-            break;
+            
 
             }
             break;
