@@ -26,4 +26,9 @@ inline void mostrarCampeon(const Partido resultados[], int totalPartidos)
         if (pos1 == -1 || pos2 == -1) {
             continue;
         }
-        
+
+        registrarPartidoEquipo(tabla[pos1], resultados[i].goles1, resultados[i].goles2);
+        registrarPartidoEquipo(tabla[pos2], resultados[i].goles2, resultados[i].goles1);
+    }
+
+    
