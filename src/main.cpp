@@ -19,6 +19,7 @@
 #include "BuscarEquipo.h"
 #include "escenario_prueba.h"
 
+
 void imprimirLinea(int largo, char simbolo)
 {
     for (int i = 0; i < largo; i++)
@@ -44,7 +45,8 @@ int main()
 
     // TODO: declaren aqui los datos del torneo.
     //       No usen variables globales.
-    int goles[6] = {};
+    Partido resultados[15] = {};
+    int totalPartidos = 0;
     std::cout << "---TORNEO DE FUTBOL---" << std::endl;
     // TODO: menu que se repite hasta elegir "Salir".
     //       Una opcion que no existe se rechaza con un mensaje.
@@ -71,15 +73,36 @@ int main()
         }
         break;
         case 2:
+       
         {
             std::cout << "\n---Nombre de los equipos---\n";
-            for (int k = 0; k < 6; k++)
+            bool equipos = false;
+            for (int k = 0; k < 6; k++){
+             if (r[k].nombre.empty())
+             {
+                equipos = true;
+                break;
+             }
+  
+             }
+             if (equipos == true)
+             {
+                cout << "Error: Primero registra todos los equipos.\n";
+             }
+            else
+            {
+                for (int k = 0; k < 6; k++)
             {
                 std::cout << r[k].nombre << std::endl;
             }
             imprimirLinea(24, '-');
             std::cout << std::endl;
+            
+
+            }
             break;
+            
+          
         }
 
         case 3:
@@ -103,11 +126,27 @@ int main()
             else
             {
                 std::cout << "ENTRO AL CASO 3\n";
-                simulacion();
+                simulacion(resultados, totalPartidos);
             }
             break;
         }
+        case 4:
+        {
+                std::cout << "\n---Resultados de los partidos---\n";
 
+            if (totalPartidos == 0)
+            {
+                std::cout << "Error: Primero debes simular el torneo.\n";
+            }
+            else
+            {
+                mostrarResultados(resultados, totalPartidos);
+            }
+
+            break;
+        }
+
+       
     
             // El menu debe permitir ejecutar el escenario obligatorio, en este orden:
             //
