@@ -18,6 +18,9 @@
 #include "torneo.h"
 #include "BuscarEquipo.h"
 #include "escenario_prueba.h"
+#include "tabla.h"
+#include "resultadospartidos.h"
+
 
 
 void imprimirLinea(int largo, char simbolo)
@@ -146,7 +149,16 @@ int main()
             break;
         }
 
+        case 5:
        
+    Partido resultados[15];
+    int totalPartidos = 0;
+
+    simulacion(resultados, totalPartidos);              // simula y guarda
+mostrarTablaPosiciones(resultados, totalPartidos);  // solo lee lo guardado y arma la tabla
+
+    break;
+
     
             // El menu debe permitir ejecutar el escenario obligatorio, en este orden:
             //
@@ -167,5 +179,8 @@ int main()
             //          resultados, tabla y campeon.}
         }
     }
-    return 0;
+    
+
+    
 }
+      
