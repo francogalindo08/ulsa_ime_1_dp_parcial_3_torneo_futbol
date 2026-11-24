@@ -31,4 +31,13 @@ inline void mostrarCampeon(const Partido resultados[], int totalPartidos)
         registrarPartidoEquipo(tabla[pos2], resultados[i].goles2, resultados[i].goles1);
     }
 
-    
+    ordenarTabla(tabla, totalEquipos);
+
+    // 2) Contar cuantos equipos tienen los puntos del primer lugar
+    int maxPuntos = tabla[0].pts;
+    int empatados = 0;
+    for (int i = 0; i < totalEquipos; i++) {
+        if (tabla[i].pts == maxPuntos) {
+            empatados++;
+        }
+    }
