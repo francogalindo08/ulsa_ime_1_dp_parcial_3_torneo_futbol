@@ -86,7 +86,7 @@ for (int i = 1; i < 6; i++)
         menosRecibidos = i;
     }
 }   
-cout << "\n Mejor Ofensiva: "
+cout << "\nMejor Ofensiva: "
      << r[masGoles].nombre
      << " (" << golesFavor[masGoles] << " goles)\n";
 
