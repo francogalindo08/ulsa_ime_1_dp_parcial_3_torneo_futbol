@@ -44,3 +44,21 @@ inline int buscarOAgregarEquipo(
     totalEquipos++;
     return totalEquipos - 1;
 }
+
+inline void registrarPartidoEquipo(EquipoTabla &equipo, int golesPropios, int golesRival)
+{
+    equipo.pj++;
+    equipo.gf += golesPropios;
+    equipo.gc += golesRival;
+
+    if (golesPropios > golesRival) {        // Ganó: +3
+        equipo.pg++;
+        equipo.pts += 3;
+    } else if (golesPropios == golesRival) { // Empató: +1
+        equipo.pe++;
+        equipo.pts += 1;
+    } else {                                 // Perdió: +0
+        equipo.pp++;
+    }
+
+}
