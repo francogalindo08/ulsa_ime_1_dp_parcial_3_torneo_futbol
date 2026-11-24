@@ -41,3 +41,16 @@ inline void mostrarCampeon(const Partido resultados[], int totalPartidos)
             empatados++;
         }
     }
+
+    cout << "\n--- CAMPEON DEL TORNEO ---\n";
+
+    int elegido = 0; // posicion del campeon en la tabla
+
+    // 3) Si hay empate, se decide manualmente
+    if (empatados > 1) {
+        cout << "Hay un empate en el primer lugar con " << maxPuntos << " puntos.\n";
+
+        for (int i = 0; i < empatados; i++) {
+            cout << (i + 1) << ". " << tabla[i].nombre << "\n";
+        }
+        
