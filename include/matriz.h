@@ -71,4 +71,26 @@ cout << endl;
 
         std::cout << endl;
     }
+    int masGoles = 0;
+int menosRecibidos = 0;
+
+for (int i = 1; i < 6; i++)
+{
+    if (golesFavor[i] > golesFavor[masGoles])
+    {
+        masGoles = i;
+    }
+
+    if (golesContra[i] < golesContra[menosRecibidos])
+    {
+        menosRecibidos = i;
+    }
+}   
+cout << "\n Mejor Ofensiva: "
+     << r[masGoles].nombre
+     << " (" << golesFavor[masGoles] << " goles)\n";
+
+cout << "Mejor defensiva: "
+     << r[menosRecibidos].nombre
+     << " (" << golesContra[menosRecibidos] << " goles recibidos)\n";
 }
