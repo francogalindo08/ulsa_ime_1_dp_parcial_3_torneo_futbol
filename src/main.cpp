@@ -147,11 +147,10 @@ int main()
 
             break;
         }
-        case 4:
-        {
+     
 
         case 5:
-       
+    {
     Partido resultados[15];
     int totalPartidos = 0;
 
@@ -159,7 +158,7 @@ int main()
 mostrarTablaPosiciones(resultados, totalPartidos);  // solo lee lo guardado y arma la tabla
 
     break;
-
+    }
     
             // El menu debe permitir ejecutar el escenario obligatorio, en este orden:
             //
@@ -178,6 +177,14 @@ mostrarTablaPosiciones(resultados, totalPartidos);  // solo lee lo guardado y ar
             // Paso 10: teclear una opcion de menu inexistente (rechazo) y salir.
             // Paso 11: ejecutar de nuevo el programa en modo aleatorio y mostrar
             //          resultados, tabla y campeon.}
+       
+       case 8:
+    {
+           mostrar_matriz(r, resultados, totalPartidos);
+    break;
+       
+       
+       
         }
     }
     
