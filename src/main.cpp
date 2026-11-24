@@ -12,15 +12,16 @@
 
 #include <iostream>
 #include <string>
+#include <cctype>
 #include "utilerias.h"
 #include "torneo.h"
 #include "simulacion.h"
-#include "torneo.h"
 #include "BuscarEquipo.h"
 #include "escenario_prueba.h"
 #include "tabla.h"
 #include "resultadospartidos.h"
 #include "matriz.h"
+#include "campeon.h"
 
 void imprimirLinea(int largo, char simbolo)
 {
@@ -149,17 +150,28 @@ int main()
         }
      
 
-        case 5:
+     case 5:
+{
+    if (totalPartidos == 0)
     {
-    Partido resultados[15];
-    int totalPartidos = 0;
-
-    simulacion(resultados, totalPartidos);              // simula y guarda
-mostrarTablaPosiciones(resultados, totalPartidos);  // solo lee lo guardado y arma la tabla
-
-    break;
+        std::cout << "Error: Primero debes simular el torneo.\n";
     }
-    
+    else
+    {
+        mostrarTablaPosiciones(resultados, totalPartidos);
+    }
+    break;
+}
+    case 6:
+{
+    mostrarCampeon(resultados, totalPartidos);
+    break;
+}
+case 7:
+{
+    consultarEquipo(r, resultados, totalPartidos);
+    break;
+}
             // El menu debe permitir ejecutar el escenario obligatorio, en este orden:
             //
             // Paso 1: elegir cada reporte sin equipos registrados (rechazos).
