@@ -10,66 +10,55 @@ void mostrar_matriz(const Registro_equipos r[],
                     int totalPartidos)
 {
     std::string matriz[6][6];
- for(int i = 0; i < 6; i++)
+    for (int i = 0; i < 6; i++)
     {
-        for(int j = 0; j < 6; j++)
+        for (int j = 0; j < 6; j++)
         {
-            matriz[i][j] = (i == j) ? "---" : "";
+            matriz[i][j] = (i == j) ? "---" : " ";
         }
     }
-    for(int p = 0; p < totalPartidos; p++)
+    for (int p = 0; p < totalPartidos; p++)
     {
         int fila = -1;
         int columna = -1;
 
-        for(int i = 0; i < 6; i++)
+        for (int i = 0; i < 6; i++)
         {
-            if(r[i].nombre == resultados[p].equipo1)
+            if (r[i].nombre == resultados[p].equipo1)
                 fila = i;
 
-            if(r[i].nombre == resultados[p].equipo2)
+            if (r[i].nombre == resultados[p].equipo2)
                 columna = i;
         }
 
-        if(fila != -1 && columna != -1)
+        if (fila != -1 && columna != -1)
         {
             matriz[fila][columna] =
-                to_string(resultados[p].goles1)
-                + "-" +
+                to_string(resultados[p].goles1) + "-" +
                 to_string(resultados[p].goles2);
+            matriz[columna][fila] =
+                to_string(resultados[p].goles2) + "-" +
+                to_string(resultados[p].goles1);
         }
     }
- std::cout << "\n--- MATRIZ DE ENFRENTAMIENTOS ---\n\n";
+    std::cout << "\n--- MATRIZ DE ENFRENTAMIENTOS ---\n\n";
 
     std::cout << "\t";
 
-    for(int i = 0; i < 6; i++)
-    {
-        cout << r[i].nombre << "\t";
-    }
-    std::cout << endl;
-    for(int i = 0; i < 6; i++)
+    for (int i = 0; i < 6; i++)
     {
         std::cout << r[i].nombre << "\t";
+    }
+    std::cout << endl;
+    for (int i = 0; i < 6; i++)
+    {
+        std::cout << std::setw(6) << r[i].nombre;
 
-        for(int j = 0; j < 6; j++)
+        for (int j = 0; j < 6; j++)
         {
-     std::cout << matriz[i][j] << "\t";
+            std::cout << std::setw(6) << matriz[i][j];
         }
 
-   std::cout << endl;
+        std::cout << endl;
     }
 }
-  
-   
-
-
-
-
-
-
-
-
-
-
-
