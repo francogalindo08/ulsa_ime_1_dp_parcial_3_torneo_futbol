@@ -3,13 +3,11 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
-#include "partidos.h"   // <-- cambia esto por el nombre de TU archivo donde está struct Partido
+#include "torneo.h"              
+#include "ResultadosPartidos.h"  
 using namespace std;
 
-// Máximo de equipos posibles (15 partidos x 2 equipos)
-const int MAX_EQUIPOS = 6;
 
-// Estructura para guardar las estadísticas de cada equipo
 struct EquipoTabla {
     string nombre;
     int pj;   // partidos jugados
@@ -20,8 +18,9 @@ struct EquipoTabla {
     int gc;   // goles en contra
     int pts;  // puntos
 };
+
 // Busca un equipo en la tabla; si no existe, lo agrega con todo en cero.
-// Devuelve la posición del equipo dentro del arreglo.
+// Devuelve la posición del equipo, o -1 si ya no hay espacio.
 inline int buscarOAgregarEquipo(
     EquipoTabla tabla[],
     int &totalEquipos,
@@ -32,7 +31,12 @@ inline int buscarOAgregarEquipo(
             return i;
         }
     }
-        tabla[totalEquipos].nombre = nombre;
+
+    if (totalEquipos >= MAX_EQUIPOS) {
+        return -1;
+    }
+
+    tabla[totalEquipos].nombre = nombre;
     tabla[totalEquipos].pj = 0;
     tabla[totalEquipos].pg = 0;
     tabla[totalEquipos].pe = 0;
@@ -45,13 +49,14 @@ inline int buscarOAgregarEquipo(
     return totalEquipos - 1;
 }
 
+// Actualiza las estadísticas de UN equipo según los goles del partido
 inline void registrarPartidoEquipo(EquipoTabla &equipo, int golesPropios, int golesRival)
 {
     equipo.pj++;
     equipo.gf += golesPropios;
     equipo.gc += golesRival;
 
-    if (golesPropios > golesRival) {        // Ganó: +3
+    if (golesPropios > golesRival) {         // Ganó: +3
         equipo.pg++;
         equipo.pts += 3;
     } else if (golesPropios == golesRival) { // Empató: +1
@@ -60,8 +65,10 @@ inline void registrarPartidoEquipo(EquipoTabla &equipo, int golesPropios, int go
     } else {                                 // Perdió: +0
         equipo.pp++;
     }
-
 }
+
+// Devuelve true si el equipo "a" debe ir ARRIBA del equipo "b"
+// Criterios: 1) puntos  2) diferencia de goles  3) goles a favor
 inline bool vaPrimero(const EquipoTabla &a, const EquipoTabla &b)
 {
     if (a.pts != b.pts) {
@@ -90,6 +97,8 @@ inline void ordenarTabla(EquipoTabla tabla[], int totalEquipos)
         }
     }
 }
+
+// Arma la tabla con los resultados YA simulados y la muestra
 inline void mostrarTablaPosiciones(
     const Partido resultados[],
     int totalPartidos)
@@ -107,9 +116,14 @@ inline void mostrarTablaPosiciones(
         int pos1 = buscarOAgregarEquipo(tabla, totalEquipos, resultados[i].equipo1);
         int pos2 = buscarOAgregarEquipo(tabla, totalEquipos, resultados[i].equipo2);
 
+        if (pos1 == -1 || pos2 == -1) {
+            continue; // equipo fuera del límite, se ignora
+        }
+
         registrarPartidoEquipo(tabla[pos1], resultados[i].goles1, resultados[i].goles2);
         registrarPartidoEquipo(tabla[pos2], resultados[i].goles2, resultados[i].goles1);
     }
+
     ordenarTabla(tabla, totalEquipos);
 
     // Imprimir la tabla

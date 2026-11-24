@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string>
 #include "torneo.h"
-#include "ResultadosPartidos.h"
+#include "resultadospartidos.h"
 
 using namespace std;
 
