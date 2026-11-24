@@ -6,6 +6,7 @@
 #include "ResultadosPartidos.h"
 #include <iomanip>
 
+
 void mostrar_matriz(const Registro_equipos r[],
                     const Partido resultados[],
                     int totalPartidos)
@@ -18,6 +19,9 @@ void mostrar_matriz(const Registro_equipos r[],
             matriz[i][j] = (i == j) ? "---" : " ";
         }
     }
+    int golesFavor[6] = {0};
+int golesContra[6] = {0};
+
     for (int p = 0; p < totalPartidos; p++)
     {
         int fila = -1;
@@ -40,6 +44,12 @@ void mostrar_matriz(const Registro_equipos r[],
             matriz[columna][fila] =
                 to_string(resultados[p].goles2) + "-" +
                 to_string(resultados[p].goles1);
+   
+    golesFavor[fila] += resultados[p].goles1;
+    golesContra[fila] += resultados[p].goles2;
+
+    golesFavor[columna] += resultados[p].goles2;
+    golesContra[columna] += resultados[p].goles1;
         }
     }
     std::cout << "\n     --- MATRIZ DE ENFRENTAMIENTOS ---\n";
@@ -61,4 +71,26 @@ cout << endl;
 
         std::cout << endl;
     }
+    int masGoles = 0;
+int menosRecibidos = 0;
+
+for (int i = 1; i < 6; i++)
+{
+    if (golesFavor[i] > golesFavor[masGoles])
+    {
+        masGoles = i;
+    }
+
+    if (golesContra[i] < golesContra[menosRecibidos])
+    {
+        menosRecibidos = i;
+    }
+}   
+cout << "\n Mejor Ofensiva: "
+     << r[masGoles].nombre
+     << " (" << golesFavor[masGoles] << " goles)\n";
+
+cout << "Mejor defensiva: "
+     << r[menosRecibidos].nombre
+     << " (" << golesContra[menosRecibidos] << " goles recibidos)\n";
 }
