@@ -110,3 +110,32 @@ inline void mostrarTablaPosiciones(
         registrarPartidoEquipo(tabla[pos1], resultados[i].goles1, resultados[i].goles2);
         registrarPartidoEquipo(tabla[pos2], resultados[i].goles2, resultados[i].goles1);
     }
+    ordenarTabla(tabla, totalEquipos);
+
+    // Imprimir la tabla
+    cout << "\n--- TABLA DE POSICIONES ---\n";
+    cout << left  << setw(5)  << "POS"
+         << left  << setw(14) << "EQUIPO"
+         << right << setw(4)  << "PJ"
+         << setw(4) << "PG"
+         << setw(4) << "PE"
+         << setw(4) << "PP"
+         << setw(5) << "GF"
+         << setw(5) << "GC"
+         << setw(5) << "PTS" << "\n";
+
+    for (int i = 0; i < totalEquipos; i++) {
+        cout << left  << setw(5)  << (i + 1)
+             << left  << setw(14) << tabla[i].nombre
+             << right << setw(4)  << tabla[i].pj
+             << setw(4) << tabla[i].pg
+             << setw(4) << tabla[i].pe
+             << setw(4) << tabla[i].pp
+             << setw(5) << tabla[i].gf
+             << setw(5) << tabla[i].gc
+             << setw(5) << tabla[i].pts << "\n";
+    }
+
+    cout << "\nPJ: jugados. PG: ganados. PE: empatados. PP: perdidos. "
+         << "GF: goles a favor. GC: goles en contra. PTS: puntos.\n";
+}
