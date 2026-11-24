@@ -20,8 +20,7 @@
 #include "escenario_prueba.h"
 #include "tabla.h"
 #include "resultadospartidos.h"
-
-
+#include "matriz.h"
 
 void imprimirLinea(int largo, char simbolo)
 {
