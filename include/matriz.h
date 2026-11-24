@@ -39,7 +39,27 @@ void mostrar_matriz(const Registro_equipos r[],
                 to_string(resultados[p].goles2);
         }
     }
+ std::cout << "\n--- MATRIZ DE ENFRENTAMIENTOS ---\n\n";
 
+    std::cout << "\t";
+
+    for(int i = 0; i < 6; i++)
+    {
+        cout << r[i].nombre << "\t";
+    }
+    std::cout << endl;
+    for(int i = 0; i < 6; i++)
+    {
+        std::cout << r[i].nombre << "\t";
+
+        for(int j = 0; j < 6; j++)
+        {
+     std::cout << matriz[i][j] << "\t";
+        }
+
+   std::cout << endl;
+    }
+}
   
    
 
