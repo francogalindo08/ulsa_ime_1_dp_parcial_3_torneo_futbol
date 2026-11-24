@@ -62,3 +62,31 @@ inline void registrarPartidoEquipo(EquipoTabla &equipo, int golesPropios, int go
     }
 
 }
+inline bool vaPrimero(const EquipoTabla &a, const EquipoTabla &b)
+{
+    if (a.pts != b.pts) {
+        return a.pts > b.pts;
+    }
+
+    int difA = a.gf - a.gc;
+    int difB = b.gf - b.gc;
+    if (difA != difB) {
+        return difA > difB;
+    }
+
+    return a.gf > b.gf;
+}
+
+// Ordena la tabla (método burbuja)
+inline void ordenarTabla(EquipoTabla tabla[], int totalEquipos)
+{
+    for (int i = 0; i < totalEquipos - 1; i++) {
+        for (int j = 0; j < totalEquipos - 1 - i; j++) {
+            if (vaPrimero(tabla[j + 1], tabla[j])) {
+                EquipoTabla temp = tabla[j];
+                tabla[j] = tabla[j + 1];
+                tabla[j + 1] = temp;
+            }
+        }
+    }
+}
