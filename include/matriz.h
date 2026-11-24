@@ -43,11 +43,12 @@ void mostrar_matriz(const Registro_equipos r[],
     }
     std::cout << "\n--- MATRIZ DE ENFRENTAMIENTOS ---\n\n";
 
-    std::cout << "\t";
+    std::cout << "          ";
 
     for (int i = 0; i < 6; i++)
     {
-        std::cout << r[i].nombre << "\t";
+        // std::cout << r[i].nombre << "\n\n\n";
+        std::cout << r[i].nombre << "   ";
     }
     std::cout << endl;
     for (int i = 0; i < 6; i++)
@@ -56,7 +57,7 @@ void mostrar_matriz(const Registro_equipos r[],
 
         for (int j = 0; j < 6; j++)
         {
-            std::cout << std::setw(6) << matriz[i][j];
+         std::cout << std::setw(6) << matriz[i][j];
         }
 
         std::cout << endl;
