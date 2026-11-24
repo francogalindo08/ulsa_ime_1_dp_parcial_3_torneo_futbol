@@ -195,6 +195,12 @@ case 7:
            mostrar_matriz(r, resultados, totalPartidos);
     break;
     }
+
+
+    case 9:
+    {
+    return 0;
+    }
        
        
         }
