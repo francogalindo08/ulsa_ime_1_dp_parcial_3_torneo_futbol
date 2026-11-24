@@ -4,6 +4,7 @@
 #include <string>
 #include "torneo.h"
 #include "ResultadosPartidos.h"
+#include <iomanip>
 
 void mostrar_matriz(const Registro_equipos r[],
                     const Partido resultados[],
@@ -41,16 +42,14 @@ void mostrar_matriz(const Registro_equipos r[],
                 to_string(resultados[p].goles1);
         }
     }
-    std::cout << "\n--- MATRIZ DE ENFRENTAMIENTOS ---\n\n";
+    std::cout << "\n     --- MATRIZ DE ENFRENTAMIENTOS ---\n";
 
-    std::cout << "          ";
+    std::cout << "     ";
+for(int i = 0; i < 6; i++) {
+    cout << setw(6) << i + 1;
+}
+cout << endl;
 
-    for (int i = 0; i < 6; i++)
-    {
-        // std::cout << r[i].nombre << "\n\n\n";
-        std::cout << r[i].nombre << "   ";
-    }
-    std::cout << endl;
     for (int i = 0; i < 6; i++)
     {
         std::cout << std::setw(6) << r[i].nombre;
