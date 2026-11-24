@@ -90,3 +90,23 @@ inline void ordenarTabla(EquipoTabla tabla[], int totalEquipos)
         }
     }
 }
+inline void mostrarTablaPosiciones(
+    const Partido resultados[],
+    int totalPartidos)
+{
+    if (totalPartidos == 0) {
+        cout << "Primero debes simular el torneo.\n";
+        return;
+    }
+
+    EquipoTabla tabla[MAX_EQUIPOS];
+    int totalEquipos = 0;
+
+    // Recorremos cada partido guardado y actualizamos a ambos equipos
+    for (int i = 0; i < totalPartidos; i++) {
+        int pos1 = buscarOAgregarEquipo(tabla, totalEquipos, resultados[i].equipo1);
+        int pos2 = buscarOAgregarEquipo(tabla, totalEquipos, resultados[i].equipo2);
+
+        registrarPartidoEquipo(tabla[pos1], resultados[i].goles1, resultados[i].goles2);
+        registrarPartidoEquipo(tabla[pos2], resultados[i].goles2, resultados[i].goles1);
+    }
