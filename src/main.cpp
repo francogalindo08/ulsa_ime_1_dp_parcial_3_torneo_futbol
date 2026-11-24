@@ -21,6 +21,7 @@
 #include "tabla.h"
 #include "resultadospartidos.h"
 #include "matriz.h"
+#include "campeon.h"
 
 void imprimirLinea(int largo, char simbolo)
 {
@@ -147,18 +148,25 @@ int main()
 
             break;
         }
+     
 
-        case 5:
-       
-    Partido resultados[15];
-    int totalPartidos = 0;
-
-    simulacion(resultados, totalPartidos);              // simula y guarda
-mostrarTablaPosiciones(resultados, totalPartidos);  // solo lee lo guardado y arma la tabla
-
+     case 5:
+{
+    if (totalPartidos == 0)
+    {
+        std::cout << "Error: Primero debes simular el torneo.\n";
+    }
+    else
+    {
+        mostrarTablaPosiciones(resultados, totalPartidos);
+    }
     break;
-
-    
+}
+    case 6:
+{
+    mostrarCampeon(resultados, totalPartidos);
+    break;
+}
             // El menu debe permitir ejecutar el escenario obligatorio, en este orden:
             //
             // Paso 1: elegir cada reporte sin equipos registrados (rechazos).
@@ -176,10 +184,16 @@ mostrarTablaPosiciones(resultados, totalPartidos);  // solo lee lo guardado y ar
             // Paso 10: teclear una opcion de menu inexistente (rechazo) y salir.
             // Paso 11: ejecutar de nuevo el programa en modo aleatorio y mostrar
             //          resultados, tabla y campeon.}
+       
+       case 8:
+    {
+           mostrar_matriz(r, resultados, totalPartidos);
+    break;
+    }
+       
+       
         }
     }
-    
-
-    
+       
 }
       
