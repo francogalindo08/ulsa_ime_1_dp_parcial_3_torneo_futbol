@@ -53,4 +53,18 @@ inline void mostrarCampeon(const Partido resultados[], int totalPartidos)
         for (int i = 0; i < empatados; i++) {
             cout << (i + 1) << ". " << tabla[i].nombre << "\n";
         }
+
+        int opcion = 0;
+        bool valida = false;
+
+        while (!valida) {
+            cout << "Elige al campeon: ";
+            if (cin >> opcion && opcion >= 1 && opcion <= empatados) {
+                valida = true;
+            } else {
+                cout << "Opcion invalida. Intenta de nuevo.\n";
+                cin.clear();
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            }
+        }
         
