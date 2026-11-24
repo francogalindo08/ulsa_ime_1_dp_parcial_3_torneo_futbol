@@ -20,3 +20,27 @@ struct EquipoTabla {
     int gc;   // goles en contra
     int pts;  // puntos
 };
+// Busca un equipo en la tabla; si no existe, lo agrega con todo en cero.
+// Devuelve la posición del equipo dentro del arreglo.
+inline int buscarOAgregarEquipo(
+    EquipoTabla tabla[],
+    int &totalEquipos,
+    const string &nombre)
+{
+    for (int i = 0; i < totalEquipos; i++) {
+        if (tabla[i].nombre == nombre) {
+            return i;
+        }
+    }
+        tabla[totalEquipos].nombre = nombre;
+    tabla[totalEquipos].pj = 0;
+    tabla[totalEquipos].pg = 0;
+    tabla[totalEquipos].pe = 0;
+    tabla[totalEquipos].pp = 0;
+    tabla[totalEquipos].gf = 0;
+    tabla[totalEquipos].gc = 0;
+    tabla[totalEquipos].pts = 0;
+
+    totalEquipos++;
+    return totalEquipos - 1;
+}
