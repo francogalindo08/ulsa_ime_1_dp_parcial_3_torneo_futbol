@@ -67,4 +67,12 @@ inline void mostrarCampeon(const Partido resultados[], int totalPartidos)
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
             }
         }
-        
+
+        elegido = opcion - 1;
+        cout << "\n";
+    }
+
+    // 4) Mostrar al campeon
+    cout << "Campeon: " << tabla[elegido].nombre << "\n";
+    cout << "Puntos: " << tabla[elegido].pts << "\n";
+}
