@@ -5,5 +5,11 @@
 #include "torneo.h"
 #include "ResultadosPartidos.h"
 
-void mostrar_matriz (Registro_equipos r[]);
-
+void mostrar_matriz(const Registro_equipos r[],
+                    const Partido resultados[],
+                    int totalPartidos)
+{
+    string matriz[6][6];
+}
+    
+   
