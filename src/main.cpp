@@ -12,10 +12,10 @@
 
 #include <iostream>
 #include <string>
+#include <cctype>
 #include "utilerias.h"
 #include "torneo.h"
 #include "simulacion.h"
-#include "torneo.h"
 #include "BuscarEquipo.h"
 #include "escenario_prueba.h"
 #include "tabla.h"
