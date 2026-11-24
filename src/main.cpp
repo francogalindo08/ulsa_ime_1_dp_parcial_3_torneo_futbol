@@ -182,13 +182,11 @@ mostrarTablaPosiciones(resultados, totalPartidos);  // solo lee lo guardado y ar
     {
            mostrar_matriz(r, resultados, totalPartidos);
     break;
-       
+    }
        
        
         }
     }
-    
-
-    
+       
 }
       
