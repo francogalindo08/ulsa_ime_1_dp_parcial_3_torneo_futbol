@@ -160,7 +160,9 @@ FIN]
 
 **¿Probaste tu receta a mano con los datos del escenario? ¿Qué corregiste?**
 
-[Inserta aquí tu respuesta]
+[Sí, realicé pruebas para comprobar que los seis equipos generaran un total de 15 partidos.
+
+Durante el desarrollo corregí la lógica de los ciclos para evitar enfrentamientos repetidos y revisé el almacenamiento de los resultados. También corregí el manejo de las variables globales y la validación del registro de equipos antes de iniciar la simulación.]
 
 ## 6. Pruebas
 
@@ -168,24 +170,24 @@ Incluye casos normales y casos límite.
 
 | # | Qué probaste | Entrada | Resultado esperado | Resultado obtenido |
 | --- | --- | --- | --- | --- |
-| 1 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 3 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
+| 1 | [Simulación completa del torneo] | [6 equipos registrados] | [Generar 15 partidos] | [Se generaron los 15 partidos] |
+| 2 | [Generación de marcadores] | [Opción 3 del menú] | [Goles entre 0 y 5] | [Marcadores dentro del rango] |
+| 3 | [Simulación sin registrar equipos] | [Opción 3 sin registrar equipos] | [Mostrar mensaje de error] | [Pendiente de confirmar] |
 
 ## 7. Bitácora de dudas y errores
 
 | # | Duda o error | Cómo lo resolví |
 | --- | --- | --- |
-| 1 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 3 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
+| 1 | [Cómo generar los partidos sin repetir enfrentamientos] | [Utilicé dos ciclos for anidados con j = i + 1] |
+| 2 | [Problemas con las variables globales] | [Corregí su declaración y manejo dentro del programa] |
+| 3 | [Evitar la simulación sin registrar equipos] | [Agregué una condición para verificar el registro antes de simular] |
 
 ## 8. Reflexión
 
 **¿Qué aprendiste?**
 
-[Inserta aquí tu respuesta]
+[Aprendí a utilizar estructuras y arreglos para almacenar información, así como a trabajar con ciclos anidados, funciones y números aleatorios. También aprendí la importancia de las validaciones y de trabajar en equipo utilizando GitHub para integrar las diferentes partes de un programa.]
 
 **¿Qué cambiarías de tu proceso?**
 
-[Inserta aquí tu respuesta]
+[Organizaría mejor mis ideas antes de comenzar a programar y realizaría más pruebas antes de integrar mi código con el de mis compañeros. De esta manera podría detectar errores más rápido y aprovechar mejor mi tiempo]
