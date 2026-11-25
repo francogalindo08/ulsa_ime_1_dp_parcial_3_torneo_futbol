@@ -89,11 +89,23 @@ Elegí los ciclos for porque la cantidad de equipos y enfrentamientos es conocid
 
 **¿Qué constantes usaste y por qué son constantes?**
 
-[Inserta aquí tu respuesta]
+[Se utilizaron los siguientes valores fijos para establecer las reglas del torneo:
+
+Cantidad de equipos: 6.
+
+Cantidad de partidos: 15.
+
+Cantidad mínima de goles aleatorios: 0.
+
+Cantidad máxima de goles aleatorios: 5.
+
+Estos valores permanecen constantes porque forman parte de las reglas establecidas para el funcionamiento del torneo.]
 
 **¿Qué funciones reutilizaste de `utilerias.h`, de `torneo.h` o de otro módulo?**
 
-[Inserta aquí tu respuesta]
+[Reutilicé la función numeroAleatorio() para generar los goles de cada equipo.
+
+También utilicé las estructuras y los datos de los equipos definidos en torneo.h, lo que permitió conectar mi módulo con el registro de equipos y compartir los resultados con los demás integrantes.]
 
 **¿Qué casos de rechazo maneja tu módulo y qué mensaje muestra en cada uno?** Si tu módulo es el 3, escribe "No aplica".
 
