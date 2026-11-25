@@ -8,10 +8,11 @@
 | --- | --- | --- | --- | --- |
 | 1 | [26084] | [Enrique Talamás Ortiz] | [EnriqueTalamas] | Registro de equipos |
 | 2 | [26080] | [Diego Alejando González Cisneros] | [DiegoAGC24] | Simulación de partidos |
-| 3 | [26321] | [Ian Rodrigo Silva Cazarin] | [Silvaian29] | Tabla de posiciones |
-| 4 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | Clasificación y campeón |
-| 5 | [26079] | [Franco Gael  Galindo Esparza] | [Francogalindo08] | Consultas |
-| 6 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | Matriz de enfrentamientos |
+| 3 | [26077] | [Matias Borrego Flores] | [matiasborregoflores012] | Simulación de partidos |
+| 4 | [26321] | [Ian Rodrigo Silva Cazarin] | [Silvaian29] | Tabla de posiciones |
+| 5 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | Clasificación y campeón |
+| 6 | [26079] | [Franco Gael  Galindo Esparza] | [Francogalindo08] | Consultas |
+| 7 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | Matriz de enfrentamientos |
 
 > **Nota:** en los equipos de 5 integrantes, todos contribuyen al módulo 6. En esa fila escriban "Todo el equipo".
 
@@ -119,7 +120,92 @@ fra  5 - 2  esp
 Receta en pseudocódigo del programa principal: el menú y cómo se conecta con cada módulo.
 
 ```
-[Inserta aquí tu respuesta]
+[INICIO
+
+Mostrar título del torneo
+
+Mientras el usuario no elija "Salir"
+
+    Mostrar menú
+
+    Leer opción
+
+    Si la opción es inválida
+        Mostrar "Número no válido"
+    FinSi
+
+    Segun la opción hacer
+
+        Caso 1: Registrar equipos
+            Solicitar los nombres de los 6 equipos
+            Guardar los nombres en el arreglo de equipos
+
+        Caso 2: Mostrar equipos
+            Verificar que existan equipos registrados
+            Si faltan equipos
+                Mostrar mensaje de error
+            Si no
+                Mostrar la lista de equipos
+            FinSi
+
+        Caso 3: Simular torneo
+            Verificar que existan los 6 equipos registrados
+            Si faltan equipos
+                Mostrar mensaje de error
+            Si no
+                Llamar al módulo de simulación
+                Generar los 15 partidos
+                Guardar los resultados
+            FinSi
+
+        Caso 4: Mostrar resultados
+            Verificar que exista una simulación
+            Si no existe
+                Mostrar mensaje de error
+            Si existe
+                Llamar al módulo de resultados
+                Mostrar los 15 partidos simulados
+            FinSi
+
+        Caso 5: Mostrar tabla de posiciones
+            Verificar que exista una simulación
+            Si no existe
+                Mostrar mensaje de error
+            Si existe
+                Llamar al módulo de tabla
+                Calcular y mostrar la clasificación
+            FinSi
+
+        Caso 6: Mostrar campeón
+            Llamar al módulo campeón
+            Mostrar el equipo campeón
+
+        Caso 7: Consultar equipo
+            Llamar al módulo de búsqueda
+            Mostrar la información del equipo solicitado
+
+        Caso 8: Mostrar matriz de enfrentamientos
+            Llamar al módulo de matriz
+            Mostrar los enfrentamientos entre equipos
+
+        Caso 9: Salir
+            Terminar el programa
+
+    FinSegun
+
+FinMientras
+
+FIN
+
+Conexión con los módulos
+torneo.h: registra y almacena los equipos.
+simulacion.h: genera los 15 partidos y los marcadores.
+resultadospartidos.h: muestra los resultados almacenados.
+tabla.h: calcula y muestra la tabla de posiciones.
+campeon.h: determina y muestra al campeón.
+BuscarEquipo.h: permite consultar información de un equipo.
+matriz.h: muestra la matriz de enfrentamientos.
+utilerias.h: proporciona funciones auxiliares como lectura de datos y generación de números aleatorios.]
 ```
 
 ## 9. Documentación individual
@@ -129,7 +215,7 @@ Enlace a la documentación y a la propuesta de mejora de cada integrante.
 | Módulo | Documentación | Propuesta de mejora |
 | --- | --- | --- |
 | 1 | [Enrique Talamas ] | [Poner las estadisticas de cada equipo o las variables de esa forma tenemos toda la informacion en un struct] |
-| 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
+| 2 | [https://github.com/francogalindo08/ulsa_ime_1_dp_parcial_3_torneo_futbol/blob/main/docs/26077_MODULO.md] | [https://github.com/francogalindo08/ulsa_ime_1_dp_parcial_3_torneo_futbol/blob/main/docs/mejoras/26077_MEJORA.md] |
 | 3 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
 | 4 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
 | 5 | Franco Galindo | [ mostrar la racha y los resultados destacados del equipo] |
