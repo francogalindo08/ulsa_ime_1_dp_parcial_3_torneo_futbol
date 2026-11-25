@@ -17,7 +17,9 @@ y llena tu copia. En equipos de cinco, el módulo 6 usa docs/modulo_6/modulo.md.
 
 ¿Qué hace tu módulo y para qué le sirve a quien usa el programa?
 
-[Inserta aquí tu respuesta]
+[Mi módulo se encarga de simular los partidos de un torneo de fútbol conformado por seis equipos. Mediante la generación de números aleatorios, se asigna una cantidad de goles a cada equipo y se almacenan los resultados de los 15 enfrentamientos.
+
+Su propósito es facilitar la simulación del torneo y proporcionar los resultados necesarios para que los demás módulos puedan calcular la tabla de posiciones, determinar al campeón y realizar consultas.]
 
 ## 3. Entradas y salidas
 
