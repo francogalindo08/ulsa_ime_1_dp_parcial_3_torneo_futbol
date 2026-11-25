@@ -79,7 +79,13 @@ También se utiliza la función numeroAleatorio(), que permite generar los goles
 
 **¿Qué ciclos usaste y por qué esos?**
 
-[Inserta aquí tu respuesta]
+[Utilicé dos ciclos for anidados.
+
+El primer ciclo recorre los equipos registrados, mientras que el segundo comienza en la posición siguiente al primer equipo, utilizando j = i + 1.
+
+Esto permite generar los 15 enfrentamientos sin repetir partidos y evita que un equipo juegue contra sí mismo.
+
+Elegí los ciclos for porque la cantidad de equipos y enfrentamientos es conocida desde el inicio.]
 
 **¿Qué constantes usaste y por qué son constantes?**
 
