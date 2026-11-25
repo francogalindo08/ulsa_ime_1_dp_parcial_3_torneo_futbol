@@ -21,7 +21,7 @@
 #include "tabla.h"
 #include "resultadospartidos.h"
 #include "matriz.h"
-#include "campeon.h"
+#include "Campeon.h"
 
 void imprimirLinea(int largo, char simbolo)
 {
