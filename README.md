@@ -214,7 +214,7 @@ Enlace a la documentación y a la propuesta de mejora de cada integrante.
 
 | Módulo | Documentación | Propuesta de mejora |
 | --- | --- | --- |
-| 1 | [https://github.com/francogalindo08/ulsa_ime_1_dp_parcial_3_torneo_futbol/blob/main/docs/26077_MODULO.md ] | [Poner las estadisticas de cada equipo o las variables de esa forma tenemos toda la informacion en un struct] |
+| 1 | [ https://github.com/francogalindo08/ulsa_ime_1_dp_parcial_3_torneo_futbol/blob/main/include/torneo.h] | [Poner las estadisticas de cada equipo o las variables de esa forma tenemos toda la informacion en un struct] |
 | 2 | [https://github.com/francogalindo08/ulsa_ime_1_dp_parcial_3_torneo_futbol/blob/main/docs/26077_MODULO.md] | [https://github.com/francogalindo08/ulsa_ime_1_dp_parcial_3_torneo_futbol/blob/main/docs/mejoras/26077_MEJORA.md] |
 | 3 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
 | 4 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
