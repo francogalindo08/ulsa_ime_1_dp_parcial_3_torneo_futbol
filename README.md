@@ -7,10 +7,10 @@
 | Módulo | Matrícula | Nombre | Usuario de GitHub | Tema |
 | --- | --- | --- | --- | --- |
 | 1 | [26084] | [Enrique Talamás Ortiz] | [EnriqueTalamas] | Registro de equipos |
-| 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | Simulación de partidos |
-| 3 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | Tabla de posiciones |
+| 2 | [26080] | [Diego Alejando González Cisneros] | [DiegoAGC24] | Simulación de partidos |
+| 3 | [26321] | [Ian Rodrigo Silva Cazarin] | [Silvaian29] | Tabla de posiciones |
 | 4 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | Clasificación y campeón |
-| 5 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | Consultas |
+| 5 | [26079] | [Franco Gael  Galindo Esparza] | [Francogalindo08] | Consultas |
 | 6 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | Matriz de enfrentamientos |
 
 > **Nota:** en los equipos de 5 integrantes, todos contribuyen al módulo 6. En esa fila escriban "Todo el equipo".
@@ -79,7 +79,21 @@ Los 6 equipos que registran en el escenario obligatorio, en orden de registro.
 Ejecuten una corrida en modo aleatorio y copien aquí sus 15 resultados.
 
 ```
-[Inserta aquí tu respuesta]
+arg  1 - 5  mex
+arg  3 - 5  bra
+arg  0 - 3  usa
+arg  1 - 0  fra
+arg  4 - 0  esp
+mex  0 - 4  bra
+mex  2 - 4  usa
+mex  1 - 0  fra
+mex  4 - 2  esp
+bra  3 - 3  usa
+bra  3 - 1  fra
+bra  3 - 3  esp
+usa  0 - 3  fra
+usa  2 - 0  esp
+fra  5 - 2  esp
 ```
 
 Antes de consultar los demás reportes de esa corrida, calculen a mano los resultados.
@@ -88,20 +102,20 @@ Antes de consultar los demás reportes de esa corrida, calculen a mano los resul
 
 | Equipo | PJ | PG | PE | PP | GF | GC | PTS |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
+| bra | 5 | 3 | 2 | 0 | 18 | 10 | 11 |
+| usa | 5 | 3 | 1 | 1 | 12 | 8 | 10 |
+| mex | 5 | 3 | 0 | 2 | 12 | 11 | 9 |
+| fra | 5 | 2 | 0 | 3 | 9 | 7 | 6 |
+| arg | 5 | 2 | 0 | 3 | 9 | 13 | 6 |
+| esp | 5 | 0 | 1 | 4 | 7 | 18 | 1 |
 
-**Campeón o equipos empatados en el primer lugar:** [Inserta aquí tu respuesta]  
-**Mejor ataque:** [Inserta aquí tu respuesta]  
-**Mejor defensa:** [Inserta aquí tu respuesta]
+**Campeón o equipos empatados en el primer lugar:** bra, con 11 puntos (no hay empate en el primer lugar)  
+**Mejor ataque:** bra, con 18 goles a favor  
+**Mejor defensa:** fra, con 7 goles en contra
 
 **¿La salida del programa coincidió con el cálculo a mano? Si no, ¿qué corrigieron?**
 
-[Inserta aquí tu respuesta]
+[AL principio no por unos errores de sintaxis y conexion entre codigos]
 
 ## 8. Receta del menú
 
@@ -121,7 +135,7 @@ Enlace a la documentación y a la propuesta de mejora de cada integrante.
 | 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
 | 3 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
 | 4 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 5 | Franco Galindo | [Inserta aquí tu respuesta] |
+| 5 | Franco Galindo | [ mostrar la racha y los resultados destacados del equipo] |
 
 <!-- Si el equipo es de seis integrantes, agreguen una fila para el módulo 6. En equipos de cinco, agreguen una fila con el enlace a docs/modulo_6/modulo.md, sin propuesta de mejora. -->
 
