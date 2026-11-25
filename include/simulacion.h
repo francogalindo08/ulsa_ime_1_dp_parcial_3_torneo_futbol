@@ -7,6 +7,26 @@
 #include "resultadospartidos.h"
 
 using namespace std;
+bool validacionsimulacion() { bool faltanequipos = false;
+
+            for (int i = 0; i < 6; i++)
+            {
+                if (r[i].nombre.empty())
+                {
+                    faltanequipos = true;
+                    break;
+                }
+            }
+           if (faltanequipos == true)
+{
+    cout << "Error: Primero registra todos los equipos.\n";
+    return false;
+}
+else
+{
+    return true;
+}
+        }
 
 inline void simulacion(Partido resultados[], int &totalPartidos) {
 

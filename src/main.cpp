@@ -66,15 +66,31 @@ int main()
         switch (opcion)
         {
         case 1:
-        {
-            std::cout << "\n---Registrar equipos---\n";
+        {    bool registrolleno = false;
+             for (int h = 0; h < 6; h++){
+              if(!r[h].nombre.empty()){
+                registrolleno = true;
+                break;
+              }
+            }
+            if (registrolleno == true)
+            {
+                cout << "------EQUIPOS LLENOS------" << endl;
+            }
+            else
+            {
+          std::cout << "\n---Registrar equipos---\n";
             for (int k = 0; k < 6; k++)
             {
+                  
                 std::cout << "Nombre del equipo " << k + 1 << ": ";
                 std::getline(std::cin, r[k].nombre);
+
+                
             }
-        }
+            }
         break;
+        }
         case 2:
        
         {
@@ -110,29 +126,13 @@ int main()
 
         case 3:
         {
-
-    
-            bool faltanequipos = false;
-
-            for (int i = 0; i < 6; i++)
-            {
-                if (r[i].nombre.empty())
-                {
-                    faltanequipos = true;
-                    break;
-                }
-            }
-            if (faltanequipos == true)
-            {
-                cout << "Error: Primero registra todos los equipos.\n";
-            }
-            else
-            {
-                std::cout << "ENTRO AL CASO 3\n";
-                simulacion(resultados, totalPartidos);
-            }
-            break;
+         if (validacionsimulacion())
+{
+    simulacion(resultados, totalPartidos);
+}
+break;
         }
+
         case 4:
         {
                 std::cout << "\n---Resultados de los partidos---\n";
