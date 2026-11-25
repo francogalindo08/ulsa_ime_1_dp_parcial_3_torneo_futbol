@@ -25,7 +25,23 @@ Su propósito es facilitar la simulación del torneo y proporcionar los resultad
 
 ¿Qué recibe tu módulo (parámetros y datos del teclado) y qué produce (lo que imprime o devuelve)?
 
-[Inserta aquí tu respuesta]
+[Entradas:
+
+Arreglo con los nombres de los seis equipos registrados.
+
+Información sobre el estado del registro de equipos.
+
+Selección de la opción 3 del menú principal.
+
+Salidas:
+
+Generación de los 15 partidos del torneo.
+
+Marcadores aleatorios entre 0 y 5 goles por equipo.
+
+Almacenamiento de los resultados en un arreglo de estructuras Partido.
+
+Mensaje de error cuando no se han registrado todos los equipos.]
 
 ## 4. Decisiones de diseño
 
@@ -33,7 +49,7 @@ Explica cada decisión y por qué la tomaste.
 
 **¿Qué funciones tiene tu módulo y qué tarea hace cada una?**
 
-[Inserta aquí tu respuesta]
+[]
 
 **¿Qué estructuras de datos usa tu módulo (registros, arreglos, matrices o apuntadores), por qué las elegiste y cómo pasas los datos a cada función (por valor, por referencia, como arreglo o con un apuntador)?**
 
