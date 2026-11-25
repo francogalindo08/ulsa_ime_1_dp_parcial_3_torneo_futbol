@@ -48,5 +48,52 @@ Los demás módulos podrán seguir utilizando los resultados almacenados sin nec
 Receta en pseudocódigo de la solución con tu propuesta. Marca cada paso nuevo con `[NUEVO]` y cada paso que cambia con `[CAMBIA]`. Los pasos sin marca son los que ya existen.
 
 ```
-[Inserta aquí tu respuesta]
+[INICIO
+
+    Verificar que los 6 equipos estén registrados
+
+    Si faltan equipos
+        Mostrar mensaje de error
+    Si no
+
+        [NUEVO] Mostrar opciones de simulación:
+            1. Simulación automática
+            2. Simulación manual
+
+        [NUEVO] Leer modo de simulación
+        [NUEVO] Validar modo seleccionado
+
+        Inicializar contador de partidos en 0
+
+        Para i desde 0 hasta 4
+            Para j desde i + 1 hasta 5
+
+                Obtener nombres de ambos equipos
+
+                [CAMBIA] Si el modo es automático
+                    Generar goles aleatorios entre 0 y 5
+
+                [NUEVO] Si el modo es manual
+                    Mostrar los equipos enfrentados
+                    Solicitar goles del primer equipo
+                    Solicitar goles del segundo equipo
+
+                    Mientras los goles no sean enteros
+                    válidos o sean negativos
+                        Solicitar nuevamente los goles
+                    FinMientras
+                FinSi
+
+                Guardar nombres y goles en Partido
+
+                Incrementar contador de partidos
+
+            FinPara
+        FinPara
+
+        Mostrar mensaje de simulación completada
+
+    FinSi
+
+FIN]
 ```
