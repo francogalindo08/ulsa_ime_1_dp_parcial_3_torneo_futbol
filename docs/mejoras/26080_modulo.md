@@ -109,14 +109,53 @@ También utilicé las estructuras y los datos de los equipos definidos en torneo
 
 **¿Qué casos de rechazo maneja tu módulo y qué mensaje muestra en cada uno?** Si tu módulo es el 3, escribe "No aplica".
 
-[Inserta aquí tu respuesta]
+[El programa verifica que los seis equipos estén registrados antes de iniciar la simulación.
+
+En caso de que no estén registrados todos los equipos, se muestra el siguiente mensaje:
+
+"Primero registra todos los equipos".
+
+Esto evita generar enfrentamientos con información incompleta.]
 
 ## 5. Receta
 
 Tu receta en pseudocódigo, escrita antes de programar.
 
 ```
-[Inserta aquí tu respuesta]
+[INICIO
+
+    Verificar que los 6 equipos estén registrados
+
+    Si faltan equipos por registrar
+        Mostrar "Primero registra todos los equipos"
+    Si no
+
+        Inicializar contador de partidos en 0
+
+        Para i desde 0 hasta 4
+
+            Para j desde i + 1 hasta 5
+
+                Obtener nombre del primer equipo
+                Obtener nombre del segundo equipo
+
+                Generar goles del primer equipo
+                entre 0 y 5
+
+                Generar goles del segundo equipo
+                entre 0 y 5
+
+                Guardar nombres y goles en Partido
+
+                Incrementar contador de partidos
+
+            FinPara
+
+        FinPara
+
+    FinSi
+
+FIN]
 ```
 
 **¿Probaste tu receta a mano con los datos del escenario? ¿Qué corregiste?**
