@@ -43,5 +43,30 @@ La propuesta agrega:
 Receta en pseudocódigo de la solución con tu propuesta. Marca cada paso nuevo con `[NUEVO]` y cada paso que cambia con `[CAMBIA]`. Los pasos sin marca son los que ya existen.
 
 ```
-[Inserta aquí tu respuesta]
+INICIO
+ 
+        PARA cada partido en resultados
+          pos1 ← buscarOAgregarEquipo(tabla, totalEquipos, equipo1)
+          pos2 ← buscarOAgregarEquipo(tabla, totalEquipos, equipo2)
+            (CAMBIA) Al agregar un equipo nuevo, inicializar pj, pg, pe, pp, gf, gc, pts Y dg en 0
+          registrarPartidoEquipo(tabla(pos1), goles1, goles2)
+          registrarPartidoEquipo(tabla(pos2), goles2, goles1)
+            Sumar 1 a pj, sumar goles a gf y gc
+            Si ganó: pg + 1, pts + 3
+            Si empató: pe + 1, pts + 1
+            Si perdió: pp + 1
+            (NUEVO) dg = gf - gc
+
+          Si los puntos son distintos: va primero el de más puntos
+          (CAMBIA) Si empatan en puntos: va primero el de mayor dg (campo guardado)
+          Si empatan en dg: va primero el de más gf
+
+        (CAMBIA) Mostrar encabezado: POS EQUIPO PJ PG PE PP GF GC DG PTS
+        PARA i = 0 HASTA totalEquipos - 1
+          [CAMBIA] Mostrar i+1, nombre, pj, pg, pe, pp, gf, gc, dg (con "+" si es positiva), pts
+
+  HASTA opcion = 0
+FIN
+
+
 ```
