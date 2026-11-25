@@ -32,8 +32,12 @@ La propuesta agrega:
 
 ¿Qué partes de la solución cambian (registros, arreglos, constantes, funciones, menú)? Justifica cada cambio.
 
-[Inserta aquí tu respuesta]
-
+| Parte | Cambio | Justificación |
+|---|---|---|
+| **Registro "EquipoTabla" | Se agrega el campo `int dg`. | Guardar la diferencia de goles de cada equipo junto con sus demás estadísticas. |
+| **Función "buscarOAgregarEquipo"*| Inicializa `dg` en 0 al agregar un equipo. | Todos los campos deben empezar en cero para que las cuentas sean correctas. |
+| **Función "registrarPartidoEquipo" | Después de sumar goles, actualiza `dg = gf - gc`. | Mantener la DG al día cada vez que se registra un partido. |
+| **Función "mostrarTablaPosiciones" | Imprime la columna DG (con signo + si es positivo) | Mostrar el criterio de desempate |
 ## 3. Receta
 
 Receta en pseudocódigo de la solución con tu propuesta. Marca cada paso nuevo con `[NUEVO]` y cada paso que cambia con `[CAMBIA]`. Los pasos sin marca son los que ya existen.
