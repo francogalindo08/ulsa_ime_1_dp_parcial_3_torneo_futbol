@@ -67,12 +67,12 @@ Los 6 equipos que registran en el escenario obligatorio, en orden de registro.
 
 | # | Nombre | Abreviatura |
 | --- | --- | --- |
-| 1 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 3 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 4 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 5 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 6 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
+| 1 | [Cruz azul] | [Cruz] |
+| 2 | [Pumas] | [Pum] |
+| 3 | [Santos] | [San] |
+| 4 | [Rayados] | [Raya] |
+| 5 | [America] | [Ame] |
+| 6 | [Saltillofc] | [Salti] |
 
 ## 7. Cálculo a mano
 
