@@ -58,7 +58,7 @@ int golesContra[6] = {0};
 for(int i = 0; i < 6; i++) {
     cout << setw(6) << i + 1;
 }
-cout << endl;
+std::cout << endl;
 
     for (int i = 0; i < 6; i++)
     {
@@ -86,11 +86,11 @@ for (int i = 1; i < 6; i++)
         menosRecibidos = i;
     }
 }   
-cout << "\nMejor Ofensiva: "
+std::cout << "\nMejor Ofensiva: "
      << r[masGoles].nombre
      << " (" << golesFavor[masGoles] << " goles)\n";
 
-cout << "Mejor defensiva: "
+std::cout << "Mejor defensiva: "
      << r[menosRecibidos].nombre
      << " (" << golesContra[menosRecibidos] << " goles recibidos)\n";
 }
