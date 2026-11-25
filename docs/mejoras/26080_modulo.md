@@ -49,15 +49,31 @@ Explica cada decisión y por qué la tomaste.
 
 **¿Qué funciones tiene tu módulo y qué tarea hace cada una?**
 
-[]
+[La función principal de mi módulo se encarga de recorrer los equipos registrados, generar los enfrentamientos y asignar los goles aleatorios de cada partido. Posteriormente, almacena los nombres de los equipos y sus respectivos marcadores.
+
+También se utiliza la función numeroAleatorio(), que permite generar los goles de cada equipo dentro del rango establecido.]
 
 **¿Qué estructuras de datos usa tu módulo (registros, arreglos, matrices o apuntadores), por qué las elegiste y cómo pasas los datos a cada función (por valor, por referencia, como arreglo o con un apuntador)?**
 
-[Inserta aquí tu respuesta]
+[Utilicé registros y arreglos para organizar la información del torneo.
+
+La estructura Partido almacena los siguientes datos:
+
+Nombre del primer equipo.
+
+Nombre del segundo equipo.
+
+Goles del primer equipo.
+
+Goles del segundo equipo.
+
+Utilicé un arreglo de estructuras Partido porque permite almacenar los 15 enfrentamientos de manera ordenada y facilita el acceso a sus resultados.
+
+Los datos de los equipos y los partidos se manejan mediante arreglos, permitiendo consultar y modificar sus elementos desde las funciones correspondientes.]
 
 **¿Dónde demuestras los temas asignados a tu módulo?**
 
-[Inserta aquí tu respuesta]
+[]
 
 **¿Qué ciclos usaste y por qué esos?**
 
