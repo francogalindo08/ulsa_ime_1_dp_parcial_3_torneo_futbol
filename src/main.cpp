@@ -12,10 +12,10 @@
 
 #include <iostream>
 #include <string>
+#include <cctype>
 #include "utilerias.h"
 #include "torneo.h"
 #include "simulacion.h"
-#include "torneo.h"
 #include "BuscarEquipo.h"
 #include "escenario_prueba.h"
 #include "tabla.h"
@@ -167,6 +167,11 @@ int main()
     mostrarCampeon(resultados, totalPartidos);
     break;
 }
+case 7:
+{
+    consultarEquipo(r, resultados, totalPartidos);
+    break;
+}
             // El menu debe permitir ejecutar el escenario obligatorio, en este orden:
             //
             // Paso 1: elegir cada reporte sin equipos registrados (rechazos).
@@ -189,6 +194,12 @@ int main()
     {
            mostrar_matriz(r, resultados, totalPartidos);
     break;
+    }
+
+
+    case 9:
+    {
+    return 0;
     }
        
        

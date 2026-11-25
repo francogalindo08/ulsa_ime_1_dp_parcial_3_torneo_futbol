@@ -6,177 +6,107 @@
 #include <iostream>
 #include <string>
 #include <cctype>
+using namespace std;
 
 
 
-// OJO: en main.cpp incluye este archivo DESPUES de torneo.h y utilerias.h
 
-// Pasa un texto a minusculas usando un apuntador a char
-inline std::string aMinusculas(std::string texto)
+// Pasa un texto a minusculas con un apuntador a char
+string aMinusculas(string texto)
 {
-    char* p = &texto[0];
-    for (int i = 0; i < static_cast<int>(texto.size()); i++)
-    {
-        *p = std::tolower(static_cast<unsigned char>(*p));
-        p++;
-    }
+    for (char* p = &texto[0]; *p != '\0'; p++)
+        *p = tolower((unsigned char)*p);
     return texto;
 }
 
-// Agrega espacios al final para que las columnas queden alineadas
-inline std::string rellenar(std::string texto, int ancho)
+// Agrega espacios al final para alinear columnas
+string rellenar(string texto, int ancho)
 {
-    while (static_cast<int>(texto.size()) < ancho)
-    {
+    while ((int)texto.size() < ancho)
         texto += " ";
-    }
     return texto;
 }
 
-// Busca el equipo con un apuntador. Regresa su posicion o -1 si no existe
-inline int buscarEquipo(Registro_equipos* equipos, std::string nombre)
+// Busca el equipo con un apuntador. Regresa su posicion o -1
+int buscarEquipo(Registro_equipos* equipos, string nombre)
 {
-    std::string buscado = aMinusculas(nombre);
-    Registro_equipos* p = equipos;
-
-    for (int i = 0; i < MAX_EQUIPOS; i++)
-    {
-        if (aMinusculas(p->nombre) == buscado)
-        {
-            return i;
-        }
-        p++;
-    }
+    nombre = aMinusculas(nombre);
+    for (Registro_equipos* p = equipos; p < equipos + MAX_EQUIPOS; p++)
+        if (aMinusculas(p->nombre) == nombre)
+            return p - equipos;
     return -1;
 }
 
-// Dice en que fila de la matriz goles quedo el partido entre a y b (a < b)
-// Los partidos van en el orden: 0-1, 0-2, 0-3, 0-4, 0-5, 1-2, 1-3, ...
-inline int indicePartido(int a, int b)
+// Busca el partido entre equipo y rival. gf = goles del equipo, gc = goles del rival
+bool obtenerMarcador(const Partido resultados[], int total, string equipo, string rival, int* gf, int* gc)
 {
-    int k = 0;
-    for (int i = 0; i < MAX_EQUIPOS; i++)
+    const Partido* p = resultados;
+    for (int i = 0; i < total; i++, p++)
     {
-        for (int j = i + 1; j < MAX_EQUIPOS; j++)
-        {
-            if (i == a && j == b)
-            {
-                return k;
-            }
-            k++;
-        }
+        if (p->equipo1 == equipo && p->equipo2 == rival) { *gf = p->goles1; *gc = p->goles2; return true; }
+        if (p->equipo1 == rival && p->equipo2 == equipo) { *gf = p->goles2; *gc = p->goles1; return true; }
     }
-    return -1;
-}
-
-// Guarda en *gf los goles del equipo y en *gc los goles del rival
-inline void obtenerMarcador(const int goles[][2], int equipo, int rival, int* gf, int* gc)
-{
-    if (equipo < rival)
-    {
-        int k = indicePartido(equipo, rival);
-        *gf = goles[k][0];
-        *gc = goles[k][1];
-    }
-    else
-    {
-        int k = indicePartido(rival, equipo);
-        *gf = goles[k][1];
-        *gc = goles[k][0];
-    }
+    return false;
 }
 
 // Muestra la ficha del equipo que esta en la posicion pos
-inline void mostrarFicha(Registro_equipos* equipos, const int goles[][2], int pos)
+void mostrarFicha(Registro_equipos* equipos, const Partido resultados[], int total, int pos)
 {
-    int ganados = 0, empatados = 0, perdidos = 0;
-    int golesFavor = 0, golesContra = 0;
-    std::string tabla = "";
+    int ganados = 0, empatados = 0, perdidos = 0, golesFavor = 0, golesContra = 0;
+    string tabla = "";
 
     for (int j = 0; j < MAX_EQUIPOS; j++)
     {
-        if (j == pos)
-        {
-            continue;
-        }
-
         int gf, gc;
-        obtenerMarcador(goles, pos, j, &gf, &gc);
+        if (j == pos || !obtenerMarcador(resultados, total, (equipos + pos)->nombre, (equipos + j)->nombre, &gf, &gc))
+            continue;
 
         golesFavor += gf;
         golesContra += gc;
 
-        std::string resultado;
-        if (gf > gc)
-        {
-            ganados++;
-            resultado = "Ganado";
-        }
-        else if (gf == gc)
-        {
-            empatados++;
-            resultado = "Empatado";
-        }
-        else
-        {
-            perdidos++;
-            resultado = "Perdido";
-        }
+        string resultado;
+        if (gf > gc)       { ganados++;   resultado = "Ganado"; }
+        else if (gf == gc) { empatados++; resultado = "Empatado"; }
+        else               { perdidos++;  resultado = "Perdido"; }
 
-        std::string marcador = std::to_string(gf) + " - " + std::to_string(gc);
-        tabla += rellenar((equipos + j)->nombre, 16) + rellenar(marcador, 10) + resultado + "\n";
+        tabla += rellenar((equipos + j)->nombre, 16) + rellenar(to_string(gf) + " - " + to_string(gc), 10) + resultado + "\n";
     }
 
-    int puntos = ganados * PUNTOS_VICTORIA + empatados * PUNTOS_EMPATE;
-
-    std::cout << "\n--- FICHA DE EQUIPO ---" << std::endl;
-    std::cout << "Equipo: " << (equipos + pos)->nombre << std::endl;
-    std::cout << "Jugados: " << ganados + empatados + perdidos << std::endl;
-    std::cout << "Ganados: " << ganados << std::endl;
-    std::cout << "Empatados: " << empatados << std::endl;
-    std::cout << "Perdidos: " << perdidos << std::endl;
-    std::cout << "Goles a favor: " << golesFavor << std::endl;
-    std::cout << "Goles en contra: " << golesContra << std::endl;
-    std::cout << "Puntos: " << puntos << std::endl << std::endl;
-    std::cout << rellenar("RIVAL", 16) << rellenar("MARCADOR", 10) << "RESULTADO" << std::endl;
-    std::cout << tabla;
+    cout << "\n--- FICHA DE EQUIPO ---\n"
+         << "Equipo: " << (equipos + pos)->nombre << "\n"
+         << "Jugados: " << ganados + empatados + perdidos << "\n"
+         << "Ganados: " << ganados << "\n"
+         << "Empatados: " << empatados << "\n"
+         << "Perdidos: " << perdidos << "\n"
+         << "Goles a favor: " << golesFavor << "\n"
+         << "Goles en contra: " << golesContra << "\n"
+         << "Puntos: " << ganados * PUNTOS_VICTORIA + empatados * PUNTOS_EMPATE << "\n\n"
+         << rellenar("RIVAL", 16) << rellenar("MARCADOR", 10) << "RESULTADO\n"
+         << tabla;
 }
 
-// Pide el nombre, lo valida, busca el equipo y muestra su ficha
-inline void consultarEquipo(Registro_equipos* equipos, const int goles[][2])
+// Pide y valida el nombre, busca el equipo y muestra su ficha
+void consultarEquipo(Registro_equipos* equipos, const Partido resultados[], int total)
 {
-    std::string nombre;
-    bool valido = false;
-    while (!valido)
+    if (total == 0)
+    {
+        cout << "Primero debes simular el torneo.\n";
+        return;
+    }
+
+    string nombre;
+    while (true)
     {
         nombre = leerCadena("Ingresa el nombre del equipo que buscas: ");
-        if (static_cast<int>(nombre.size()) < MIN_CARACTERES_NOMBRE ||
-            static_cast<int>(nombre.size()) > MAX_CARACTERES_NOMBRE)
-        {
-            std::cout << "El nombre debe tener entre " << MIN_CARACTERES_NOMBRE
-                      << " y " << MAX_CARACTERES_NOMBRE << " caracteres." << std::endl;
-        }
-        else
-        {
-            valido = true;
-        }
+        if ((int)nombre.size() >= MIN_CARACTERES_NOMBRE && (int)nombre.size() <= MAX_CARACTERES_NOMBRE)
+            break;
+        cout << "El nombre debe tener entre " << MIN_CARACTERES_NOMBRE << " y " << MAX_CARACTERES_NOMBRE << " caracteres.\n";
     }
 
     int pos = buscarEquipo(equipos, nombre);
-
     if (pos == -1)
-    {
-        std::cout << "\n--- FICHA DE EQUIPO ---" << std::endl;
-        std::cout << "Equipo no encontrado: " << nombre << std::endl;
-    }
+        cout << "\n--- FICHA DE EQUIPO ---\nEquipo no encontrado: " << nombre << "\n";
     else
-    {
-        mostrarFicha(equipos, goles, pos);
-    }
+        mostrarFicha(equipos, resultados, total, pos);
 }
-
-
-
-
-
 
