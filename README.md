@@ -54,7 +54,61 @@ Para ejecutar en Windows:
 
 Describan cada TDA que diseñaron como registro (`struct`): qué datos guarda, qué operaciones tiene y por qué.
 *Struct Registro_equipos: lo que hace es tomar los nombres que luego se le sumo un for para que sean 6 equipos.
-[Inserta aquí tu respuesta]
+[TDA: Registro_equipos
+
+Datos que guarda:
+
+Nombre del equipo (nombre).
+
+Operaciones que tiene:
+
+Registrar equipos.
+Mostrar equipos registrados.
+Proporcionar los nombres a los módulos de simulación, consulta y tabla de posiciones.
+
+¿Por qué se eligió?
+
+Porque permite agrupar la información de cada equipo en una sola estructura y facilita su acceso desde los distintos módulos del sistema.
+TDA: Partido
+
+Datos que guarda:
+
+Nombre del primer equipo (equipo1).
+Nombre del segundo equipo (equipo2).
+Goles del primer equipo (goles1).
+Goles del segundo equipo (goles2).
+
+Operaciones que tiene:
+
+Almacenar los resultados de cada partido simulado.
+Ser utilizado por los módulos de resultados, tabla de posiciones, campeón y matriz de enfrentamientos.
+Facilitar la consulta de los marcadores generados durante la simulación.
+
+¿Por qué se eligió?
+
+Porque reúne en una sola estructura toda la información necesaria de un encuentro de fútbol.
+TDA: EquipoTabla
+
+Datos que guarda:
+
+Nombre del equipo.
+Partidos jugados (PJ).
+Partidos ganados (PG).
+Partidos empatados (PE).
+Partidos perdidos (PP).
+Goles a favor (GF).
+Goles en contra (GC).
+Puntos obtenidos (PTS).
+
+Operaciones que tiene:
+
+Calcular y almacenar estadísticas del torneo.
+Generar la tabla de posiciones.
+Apoyar la determinación del campeón.
+
+¿Por qué se eligió?
+
+Porque concentra todas las estadísticas necesarias de cada equipo para construir la clasificación del torneo y mostrar el rendimiento de los participantes.]
 
 ## 5. Reglas del programa
 
