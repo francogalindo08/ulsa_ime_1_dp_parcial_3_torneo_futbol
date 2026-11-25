@@ -19,7 +19,7 @@ Consulta un equipo por nombre después de simular el torneo y muestra su ficha: 
 
 ## 3. Entradas y salidas
 
-**Entradas:** arreglo de equipos, arreglo de resultados, total de partidos y el nombre del equipo (teclado).
+**Entradas:** el nombre del equipo 
 **Salidas:** imprime la ficha del equipo o un mensaje de error. Las funciones auxiliares devuelven posición, `bool` o `string`.
 
 ## 4. Decisiones de diseño
@@ -36,7 +36,7 @@ Consulta un equipo por nombre después de simular el torneo y muestra su ficha: 
 Usa los arreglos de `Registro_equipos` y `Partido`. Los equipos van por apuntador, los resultados como arreglo `const`, `gf` y `gc` por apuntador para devolver dos valores, y los textos por valor para no alterar el original.
 
 **¿Dónde demuestras los temas asignados a tu módulo?** (*)
-Apuntadores y aritmética de apuntadores (`p++`, `equipos + pos`, `p - equipos`), paso por apuntador (`int* gf`) y manejo de arreglos y cadenas.
+Apuntadores  (`p++`, `equipos + pos`, `p - equipos`), paso por apuntador (`int* gf`) y manejo de arreglos y cadenas.
 
 **¿Qué ciclos usaste y por qué esos?**
 `for` cuando se sabe cuántos elementos recorrer, `while` en `rellenar` hasta llegar al ancho, y `while (true)` con `break` para repetir la petición hasta que el nombre sea válido.
@@ -49,7 +49,6 @@ Apuntadores y aritmética de apuntadores (`p++`, `equipos + pos`, `p - equipos`)
 
 **¿Qué casos de rechazo maneja?**
 - Sin simular: "Primero debes simular el torneo."
-- Nombre de longitud inválida: "El nombre debe tener entre X y Y caracteres."
 - Equipo inexistente: "Equipo no encontrado: <nombre>".
 
 ## 5. Receta
