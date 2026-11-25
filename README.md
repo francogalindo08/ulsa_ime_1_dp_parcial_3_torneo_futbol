@@ -95,9 +95,6 @@ usa  0 - 3  fra
 usa  2 - 0  esp
 fra  5 - 2  esp
 ```
-
-Antes de consultar los demás reportes de esa corrida, calculen a mano los resultados.
-
 **Tabla de posiciones:**
 
 | Equipo | PJ | PG | PE | PP | GF | GC | PTS |
