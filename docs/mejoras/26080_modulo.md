@@ -73,7 +73,9 @@ Los datos de los equipos y los partidos se manejan mediante arreglos, permitiend
 
 **¿Dónde demuestras los temas asignados a tu módulo?**
 
-[]
+[La función principal de mi módulo se encarga de recorrer los equipos registrados, generar los enfrentamientos y asignar los goles aleatorios de cada partido. Posteriormente, almacena los nombres de los equipos y sus respectivos marcadores.
+
+También se utiliza la función numeroAleatorio(), que permite generar los goles de cada equipo dentro del rango establecido.]
 
 **¿Qué ciclos usaste y por qué esos?**
 
