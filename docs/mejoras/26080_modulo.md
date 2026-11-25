@@ -79,31 +79,90 @@ También se utiliza la función numeroAleatorio(), que permite generar los goles
 
 **¿Qué ciclos usaste y por qué esos?**
 
-[Inserta aquí tu respuesta]
+[Utilicé dos ciclos for anidados.
+
+El primer ciclo recorre los equipos registrados, mientras que el segundo comienza en la posición siguiente al primer equipo, utilizando j = i + 1.
+
+Esto permite generar los 15 enfrentamientos sin repetir partidos y evita que un equipo juegue contra sí mismo.
+
+Elegí los ciclos for porque la cantidad de equipos y enfrentamientos es conocida desde el inicio.]
 
 **¿Qué constantes usaste y por qué son constantes?**
 
-[Inserta aquí tu respuesta]
+[Se utilizaron los siguientes valores fijos para establecer las reglas del torneo:
+
+Cantidad de equipos: 6.
+
+Cantidad de partidos: 15.
+
+Cantidad mínima de goles aleatorios: 0.
+
+Cantidad máxima de goles aleatorios: 5.
+
+Estos valores permanecen constantes porque forman parte de las reglas establecidas para el funcionamiento del torneo.]
 
 **¿Qué funciones reutilizaste de `utilerias.h`, de `torneo.h` o de otro módulo?**
 
-[Inserta aquí tu respuesta]
+[Reutilicé la función numeroAleatorio() para generar los goles de cada equipo.
+
+También utilicé las estructuras y los datos de los equipos definidos en torneo.h, lo que permitió conectar mi módulo con el registro de equipos y compartir los resultados con los demás integrantes.]
 
 **¿Qué casos de rechazo maneja tu módulo y qué mensaje muestra en cada uno?** Si tu módulo es el 3, escribe "No aplica".
 
-[Inserta aquí tu respuesta]
+[El programa verifica que los seis equipos estén registrados antes de iniciar la simulación.
+
+En caso de que no estén registrados todos los equipos, se muestra el siguiente mensaje:
+
+"Primero registra todos los equipos".
+
+Esto evita generar enfrentamientos con información incompleta.]
 
 ## 5. Receta
 
 Tu receta en pseudocódigo, escrita antes de programar.
 
 ```
-[Inserta aquí tu respuesta]
+[INICIO
+
+    Verificar que los 6 equipos estén registrados
+
+    Si faltan equipos por registrar
+        Mostrar "Primero registra todos los equipos"
+    Si no
+
+        Inicializar contador de partidos en 0
+
+        Para i desde 0 hasta 4
+
+            Para j desde i + 1 hasta 5
+
+                Obtener nombre del primer equipo
+                Obtener nombre del segundo equipo
+
+                Generar goles del primer equipo
+                entre 0 y 5
+
+                Generar goles del segundo equipo
+                entre 0 y 5
+
+                Guardar nombres y goles en Partido
+
+                Incrementar contador de partidos
+
+            FinPara
+
+        FinPara
+
+    FinSi
+
+FIN]
 ```
 
 **¿Probaste tu receta a mano con los datos del escenario? ¿Qué corregiste?**
 
-[Inserta aquí tu respuesta]
+[Sí, realicé pruebas para comprobar que los seis equipos generaran un total de 15 partidos.
+
+Durante el desarrollo corregí la lógica de los ciclos para evitar enfrentamientos repetidos y revisé el almacenamiento de los resultados. También corregí el manejo de las variables globales y la validación del registro de equipos antes de iniciar la simulación.]
 
 ## 6. Pruebas
 
@@ -111,24 +170,24 @@ Incluye casos normales y casos límite.
 
 | # | Qué probaste | Entrada | Resultado esperado | Resultado obtenido |
 | --- | --- | --- | --- | --- |
-| 1 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 3 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
+| 1 | [Simulación completa del torneo] | [6 equipos registrados] | [Generar 15 partidos] | [Se generaron los 15 partidos] |
+| 2 | [Generación de marcadores] | [Opción 3 del menú] | [Goles entre 0 y 5] | [Marcadores dentro del rango] |
+| 3 | [Simulación sin registrar equipos] | [Opción 3 sin registrar equipos] | [Mostrar mensaje de error] | [Pendiente de confirmar] |
 
 ## 7. Bitácora de dudas y errores
 
 | # | Duda o error | Cómo lo resolví |
 | --- | --- | --- |
-| 1 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 3 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
+| 1 | [Cómo generar los partidos sin repetir enfrentamientos] | [Utilicé dos ciclos for anidados con j = i + 1] |
+| 2 | [Problemas con las variables globales] | [Corregí su declaración y manejo dentro del programa] |
+| 3 | [Evitar la simulación sin registrar equipos] | [Agregué una condición para verificar el registro antes de simular] |
 
 ## 8. Reflexión
 
 **¿Qué aprendiste?**
 
-[Inserta aquí tu respuesta]
+[Aprendí a utilizar estructuras y arreglos para almacenar información, así como a trabajar con ciclos anidados, funciones y números aleatorios. También aprendí la importancia de las validaciones y de trabajar en equipo utilizando GitHub para integrar las diferentes partes de un programa.]
 
 **¿Qué cambiarías de tu proceso?**
 
-[Inserta aquí tu respuesta]
+[Organizaría mejor mis ideas antes de comenzar a programar y realizaría más pruebas antes de integrar mi código con el de mis compañeros. De esta manera podría detectar errores más rápido y aprovechar mejor mi tiempo]
