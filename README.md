@@ -54,13 +54,76 @@ Para ejecutar en Windows:
 
 Describan cada TDA que diseñaron como registro (`struct`): qué datos guarda, qué operaciones tiene y por qué.
 *Struct Registro_equipos: lo que hace es tomar los nombres que luego se le sumo un for para que sean 6 equipos.
-[Inserta aquí tu respuesta]
+[TDA: Registro_equipos
+
+Datos que guarda:
+
+Nombre del equipo (nombre).
+
+Operaciones que tiene:
+
+Registrar equipos.
+Mostrar equipos registrados.
+Proporcionar los nombres a los módulos de simulación, consulta y tabla de posiciones.
+
+¿Por qué se eligió?
+
+Porque permite agrupar la información de cada equipo en una sola estructura y facilita su acceso desde los distintos módulos del sistema.
+TDA: Partido
+
+Datos que guarda:
+
+Nombre del primer equipo (equipo1).
+Nombre del segundo equipo (equipo2).
+Goles del primer equipo (goles1).
+Goles del segundo equipo (goles2).
+
+Operaciones que tiene:
+
+Almacenar los resultados de cada partido simulado.
+Ser utilizado por los módulos de resultados, tabla de posiciones, campeón y matriz de enfrentamientos.
+Facilitar la consulta de los marcadores generados durante la simulación.
+
+¿Por qué se eligió?
+
+Porque reúne en una sola estructura toda la información necesaria de un encuentro de fútbol.
+TDA: EquipoTabla
+
+Datos que guarda:
+
+Nombre del equipo.
+Partidos jugados (PJ).
+Partidos ganados (PG).
+Partidos empatados (PE).
+Partidos perdidos (PP).
+Goles a favor (GF).
+Goles en contra (GC).
+Puntos obtenidos (PTS).
+
+Operaciones que tiene:
+
+Calcular y almacenar estadísticas del torneo.
+Generar la tabla de posiciones.
+Apoyar la determinación del campeón.
+
+¿Por qué se eligió?
+
+Porque concentra todas las estadísticas necesarias de cada equipo para construir la clasificación del torneo y mostrar el rendimiento de los participantes.]
 
 ## 5. Reglas del programa
 
 Escriban las decisiones que el equipo tomó y que el cálculo a mano necesita. Por ejemplo: cómo se obtiene la abreviatura y qué pasa si dos se repiten.
 
-[Inserta aquí tu respuesta]
+[Decisiones tomadas por el equipo
+El torneo se juega con 6 equipos y formato todos contra todos a una sola vuelta.
+Cada enfrentamiento se juega una sola vez, por lo que se generan 15 partidos en total.
+Los goles de cada equipo se obtienen mediante la función numeroAleatorio(), con valores entre 0 y 5.
+Un equipo obtiene 3 puntos por victoria, 1 punto por empate y 0 puntos por derrota.
+Los partidos se generan usando la lógica i contra j, donde j comienza en i + 1 para evitar partidos repetidos y enfrentamientos de un equipo consigo mismo.
+Los resultados de los partidos se almacenan en la estructura Partido para que puedan ser utilizados por los módulos de resultados, tabla de posiciones, campeón y matriz de enfrentamientos.
+La tabla de posiciones utiliza los campos: partidos jugados (PJ), partidos ganados (PG), partidos empatados (PE), partidos perdidos (PP), goles a favor (GF), goles en contra (GC) y puntos (PTS).
+Antes de simular el torneo se verifica que los 6 equipos hayan sido registrados.
+Si no existe una simulación previa, los módulos de resultados y tabla muestran un mensaje de error.]
 
 ## 6. Equipos del escenario
 
@@ -214,7 +277,7 @@ Enlace a la documentación y a la propuesta de mejora de cada integrante.
 
 | Módulo | Documentación | Propuesta de mejora |
 | --- | --- | --- |
-| 1 | [ https://github.com/francogalindo08/ulsa_ime_1_dp_parcial_3_torneo_futbol/blob/main/include/torneo.h] | [Poner las estadisticas de cada equipo o las variables de esa forma tenemos toda la informacion en un struct] |
+| 1 | [https://github.com/francogalindo08/ulsa_ime_1_dp_parcial_3_torneo_futbol/blob/main/docs/26077_MODULO.md ] | [Poner las estadisticas de cada equipo o las variables de esa forma tenemos toda la informacion en un struct] |
 | 2 | [https://github.com/francogalindo08/ulsa_ime_1_dp_parcial_3_torneo_futbol/blob/main/docs/26077_MODULO.md] | [https://github.com/francogalindo08/ulsa_ime_1_dp_parcial_3_torneo_futbol/blob/main/docs/mejoras/26077_MEJORA.md] |
 | 3 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
 | 4 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
