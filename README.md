@@ -114,7 +114,16 @@ Porque concentra todas las estadísticas necesarias de cada equipo para construi
 
 Escriban las decisiones que el equipo tomó y que el cálculo a mano necesita. Por ejemplo: cómo se obtiene la abreviatura y qué pasa si dos se repiten.
 
-[Inserta aquí tu respuesta]
+[Decisiones tomadas por el equipo
+El torneo se juega con 6 equipos y formato todos contra todos a una sola vuelta.
+Cada enfrentamiento se juega una sola vez, por lo que se generan 15 partidos en total.
+Los goles de cada equipo se obtienen mediante la función numeroAleatorio(), con valores entre 0 y 5.
+Un equipo obtiene 3 puntos por victoria, 1 punto por empate y 0 puntos por derrota.
+Los partidos se generan usando la lógica i contra j, donde j comienza en i + 1 para evitar partidos repetidos y enfrentamientos de un equipo consigo mismo.
+Los resultados de los partidos se almacenan en la estructura Partido para que puedan ser utilizados por los módulos de resultados, tabla de posiciones, campeón y matriz de enfrentamientos.
+La tabla de posiciones utiliza los campos: partidos jugados (PJ), partidos ganados (PG), partidos empatados (PE), partidos perdidos (PP), goles a favor (GF), goles en contra (GC) y puntos (PTS).
+Antes de simular el torneo se verifica que los 6 equipos hayan sido registrados.
+Si no existe una simulación previa, los módulos de resultados y tabla muestran un mensaje de error.]
 
 ## 6. Equipos del escenario
 
