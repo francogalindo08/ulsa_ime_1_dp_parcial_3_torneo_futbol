@@ -179,24 +179,26 @@ Incluye casos normales y casos límite.
 
 | # | Qué probaste | Entrada | Resultado esperado | Resultado obtenido |
 | --- | --- | --- | --- | --- |
-| 1 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 3 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
+| 1 | Ver la tabla antes de simular (caso límite) | "totalPartidos = 0` | Mensaje "Primero debes simular el torneo.` y no se imprime tabla | Se mostró el mensaje y no se imprimió la tabla |
+| 2 | Tabla después de simular el torneo (caso normal) | 15 partidos generados por `simulacion" | 6 equipos, cada uno con PJ = 5, PG + PE + PP = 5, ordenados de más a menos puntos | Se mostraron 6 equipos con PJ = 5 y ordenados por puntos |
+| 3 | Desempate por diferencia de goles (caso límite) | Dos equipos con los mismos puntos y distinta diferencia de goles | Queda arriba el de mayor diferencia (GF − GC) | Quedó arriba el de mayor diferencia de goles |
+
 
 ## 7. Bitácora de dudas y errores
 
 | # | Duda o error | Cómo lo resolví |
 | --- | --- | --- |
-| 1 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 3 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
+| 1 | No entendía para qué servía el "#include" del archivo de resultados en "tabla.h". | Entendí que "tabla.h" usa el registro "Partido", que está definido en "ResultadosPartidos.h`, y que sin ese include el compilador no lo reconoce. Usé el nombre exacto del archivo, respetando mayúsculas. |
+| 2 | Duda: ¿por qué el arreglo de resultados es de 15 si solo hay 6 equipos? | Con 6 equipos jugando todos contra todos una vez, cada equipo juega 5 partidos: (6 × 5) / 2 = 15 partidos en total. |
+| 3 | Error de compilación: "redefinition of 'const int MAX_EQUIPOS'`. | La constante ya estaba definida en "torneo.h". Borré la declaración repetida de "tabla.h" y agregué `#include "torneo.h" para usar la misma constante. |
 
 ## 8. Reflexión
 
 **¿Qué aprendiste?**
 
-[Inserta aquí tu respuesta]
+[aprendi a poner las rayas que aparecen en el titulo de tabla de posicion y tambien a como acomodar los resultados en forma de tabla]
 
 **¿Qué cambiarías de tu proceso?**
 
-[Inserta aquí tu respuesta]
+ Revisaría antes qué constantes y estructuras ya
+existen en los archivos de mis compañeros para no repetirlas
