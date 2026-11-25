@@ -10,9 +10,9 @@
 | 2 | [26080] | [Diego Alejando González Cisneros] | [DiegoAGC24] | Simulación de partidos |
 | 3 | [26077] | [Matias Borrego Flores] | [matiasborregoflores012] | Simulación de partidos |
 | 4 | [26321] | [Ian Rodrigo Silva Cazarin] | [Silvaian29] | Tabla de posiciones |
-| 5 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | Clasificación y campeón |
+| 5 | [26076] | [erock aguilar] | [erick1867] | Clasificación y campeón |
 | 6 | [26079] | [Franco Gael  Galindo Esparza] | [Francogalindo08] | Consultas |
-| 7 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | Matriz de enfrentamientos |
+| 7 | [] | [] | [Inserta aquí tu respuesta] | Matriz de enfrentamientos |
 
 > **Nota:** en los equipos de 5 integrantes, todos contribuyen al módulo 6. En esa fila escriban "Todo el equipo".
 
@@ -280,7 +280,7 @@ Enlace a la documentación y a la propuesta de mejora de cada integrante.
 | 1 | [https://github.com/francogalindo08/ulsa_ime_1_dp_parcial_3_torneo_futbol/blob/main/docs/26077_MODULO.md] | [Poner las estadisticas de cada equipo o las variables de esa forma tenemos toda la informacion en un struct] |
 | 2 | [https://github.com/francogalindo08/ulsa_ime_1_dp_parcial_3_torneo_futbol/blob/main/docs/26077_MODULO.md] | [https://github.com/francogalindo08/ulsa_ime_1_dp_parcial_3_torneo_futbol/blob/main/docs/mejoras/26077_MEJORA.md] |
 | 3 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 4 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
+| 4 | [ian silva] | [mostrar los goles de diferencia en la tabla final (DF)] |
 | 5 | Franco Galindo | [ mostrar la racha y los resultados destacados del equipo] |
 
 <!-- Si el equipo es de seis integrantes, agreguen una fila para el módulo 6. En equipos de cinco, agreguen una fila con el enlace a docs/modulo_6/modulo.md, sin propuesta de mejora. -->
