@@ -29,7 +29,19 @@ Esto beneficiaría a los usuarios al permitirles registrar resultados de partido
 
 ¿Qué partes de la solución cambian (registros, arreglos, constantes, funciones, menú)? Justifica cada cambio.
 
-[Inserta aquí tu respuesta]
+[Registros: Se conserva la estructura Partido, ya que contiene los datos necesarios para almacenar los resultados.
+
+Arreglos: Se mantiene el arreglo de los 15 partidos, debido a que la cantidad de enfrentamientos no cambia.
+
+Constantes: Se mantienen las constantes relacionadas con la cantidad de equipos y partidos.
+
+Funciones: Se agrega una función llamada simularPartidosManual(), encargada de solicitar, validar y almacenar los goles ingresados por el usuario.
+
+Menú: Se agrega un submenú dentro de la opción de simulación para elegir entre el modo automático y el modo manual.
+
+Validaciones: Se verifica que los goles ingresados sean números enteros mayores o iguales a cero.
+
+Los demás módulos podrán seguir utilizando los resultados almacenados sin necesidad de modificar su funcionamiento.]
 
 ## 3. Receta
 
