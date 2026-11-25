@@ -10,7 +10,7 @@
 | 2 | [26080] | [Diego Alejando González Cisneros] | [DiegoAGC24] | Simulación de partidos |
 | 3 | [26077] | [Matias Borrego Flores] | [matiasborregoflores012] | Simulación de partidos |
 | 4 | [26321] | [Ian Rodrigo Silva Cazarin] | [Silvaian29] | Tabla de posiciones |
-| 5 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] | Clasificación y campeón |
+| 5 | [26076] | [erock aguilar] | [erick1867] | Clasificación y campeón |
 | 6 | [26079] | [Franco Gael  Galindo Esparza] | [Francogalindo08] | Consultas |
 | 7 | [] | [] | [Inserta aquí tu respuesta] | Matriz de enfrentamientos |
 
