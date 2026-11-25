@@ -88,5 +88,18 @@ Mostrar "Simulación iniciada".
     [CAMBIA] Para cada rival j desde i + 1 hasta cantidadEquipos - 1
 
         Generar goles del equipo i.
-        Generar goles del equipo j.]
+
+        Generar goles del equipo j.
+
+        Registrar resultado del partido.
+
+        Mostrar resultado del encuentro.
+
+ 
+
+[NUEVO] Calcular automáticamente el número total de partidos según la cantidad de equipos.
+
+Mostrar "Simulación exitosa".
+
+FIN]
 ```

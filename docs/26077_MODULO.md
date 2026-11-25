@@ -31,10 +31,7 @@ No recibe datos directamente del teclado durante la simulación.
 
 Produce:
 
-Los 15 enfrentamientos del torneo (todos contra todos a una vuelta).
-Un marcador aleatorio para cada partido.
-La impresión en pantalla de los resultados de los encuentros.
-Un mensaje indicando que la simulación se realizó correctamente.]
+Produce los 15 partidos simulados y sus marcadores, almacenándolos en la estructura Partido para ser utilizados por otros módulos.]
 
 ## 4. Decisiones de diseño
 
@@ -131,13 +128,11 @@ Se aprovechan los datos generados por el módulo de registro de equipos, ya que 
 **¿Qué casos de rechazo maneja tu módulo y qué mensaje muestra en cada uno?** Si tu módulo es el 3, escribe "No aplica".
 
 [
-1. Intentar simular sin que los 6 equipos estén registrados.
+Intentar simular sin que los 6 equipos estén registrados.
+Mensaje: "Error: Primero registra todos los equipos."
 
-Condición: faltan equipos por registrar o existen nombres vacíos.
-
-2. Intentar simular nuevamente un torneo ya generado.
-
-Condición: la simulación ya fue ejecutada anteriormente.]
+Intentar simular nuevamente un torneo ya generado.
+Mensaje: "Error: El torneo ya fue simulado."]
 
 ## 5. Receta
 
