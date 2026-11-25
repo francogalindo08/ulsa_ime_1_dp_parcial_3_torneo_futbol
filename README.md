@@ -117,7 +117,7 @@ Enlace a la documentación y a la propuesta de mejora de cada integrante.
 
 | Módulo | Documentación | Propuesta de mejora |
 | --- | --- | --- |
-| 1 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
+| 1 | [Enrique Talamas ] | [Poner las estadisticas de cada equipo o las variables de esa forma tenemos toda la informacion en un struct] |
 | 2 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
 | 3 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
 | 4 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
