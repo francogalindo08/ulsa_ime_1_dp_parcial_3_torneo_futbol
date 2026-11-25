@@ -110,29 +110,13 @@ int main()
 
         case 3:
         {
-
-    
-            bool faltanequipos = false;
-
-            for (int i = 0; i < 6; i++)
-            {
-                if (r[i].nombre.empty())
-                {
-                    faltanequipos = true;
-                    break;
-                }
-            }
-            if (faltanequipos == true)
-            {
-                cout << "Error: Primero registra todos los equipos.\n";
-            }
-            else
-            {
-                std::cout << "ENTRO AL CASO 3\n";
-                simulacion(resultados, totalPartidos);
-            }
-            break;
+         if (validacionsimulacion())
+{
+    simulacion(resultados, totalPartidos);
+}
+break;
         }
+
         case 4:
         {
                 std::cout << "\n---Resultados de los partidos---\n";
