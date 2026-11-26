@@ -279,9 +279,9 @@ Enlace a la documentación y a la propuesta de mejora de cada integrante.
 | --- | --- | --- |
 | 1 | [https://github.com/francogalindo08/ulsa_ime_1_dp_parcial_3_torneo_futbol/blob/main/docs/26077_MODULO.md] | [Poner las estadisticas de cada equipo o las variables de esa forma tenemos toda la informacion en un struct] |
 | 2 | [https://github.com/francogalindo08/ulsa_ime_1_dp_parcial_3_torneo_futbol/blob/main/docs/26077_MODULO.md] | [https://github.com/francogalindo08/ulsa_ime_1_dp_parcial_3_torneo_futbol/blob/main/docs/mejoras/26077_MEJORA.md] |
-| 3 | [Inserta aquí tu respuesta] | [Inserta aquí tu respuesta] |
-| 4 | [ian silva] | [mostrar los goles de diferencia en la tabla final (DF)] |
-| 5 | Franco Galindo | [ mostrar la racha y los resultados destacados del equipo] |
+| 3 | [] | [Inserta aquí tu respuesta] |
+| 4 | [] | [mostrar los goles de diferencia en la tabla final (DF)] |
+| 5 | C:\Users\Franc\OneDrive\Documentos\GitHub\ulsa_ime_1_dp_parcial_3_torneo_futbol\docs\mejoras\26079_modulo.md| [ mostrar la racha y los resultados destacados del equipo] |
 
 <!-- Si el equipo es de seis integrantes, agreguen una fila para el módulo 6. En equipos de cinco, agreguen una fila con el enlace a docs/modulo_6/modulo.md, sin propuesta de mejora. -->
 
